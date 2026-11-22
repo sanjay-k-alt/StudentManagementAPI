@@ -1,0 +1,22 @@
+﻿
+CREATE DATABASE IF NOT EXISTS StudentManagementDB;
+
+USE StudentManagementDB;
+
+CREATE TABLE IF NOT EXISTS Students
+(
+    Id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+
+    FullName VARCHAR(100) NOT NULL,
+
+    Email VARCHAR(150) NOT NULL,
+
+    Course VARCHAR(100) NOT NULL,
+
+    Age INT NOT NULL,
+
+    CreatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Check student records
+SELECT * FROM Students;
